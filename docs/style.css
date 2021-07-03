@@ -1,0 +1,51 @@
+*{margin:0px;padding:0px;box-sizing:border-box;outline:none;font-family:Calibri;}
+html{font-size:62.5%;}
+body{
+    font-size:1.6rem;
+    display:flex;
+    flex-direction:column;
+    height:100vh;
+    width:100vw;
+    overflow-x:hidden;
+    background-color: rgb(53, 51, 51);
+}
+
+.header{
+    width: 100vw;
+    height: 3.5rem;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 0.5rem;
+    letter-spacing: 2.5px;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+
+.footer{
+    width: 100vw;
+    background-color: black;
+    padding: 0.5rem;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+textarea{
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    resize: none;
+    border: none;
+    overflow-y: hidden;
+    background-color: transparent;
+    color: white;
+}
+
+textarea::placeholder{
+    color: rgb(226, 225, 225);
+    opacity: .8;
+}
