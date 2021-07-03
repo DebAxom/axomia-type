@@ -1,6 +1,5 @@
 import includePaths from 'rollup-plugin-includepaths';
 import json from '@rollup/plugin-json';
-import jsonc from "rollup-plugin-jsonc";
 import {terser} from 'rollup-plugin-terser';
 
 let includePathOptions = {
@@ -13,8 +12,8 @@ let includePathOptions = {
 export default {
     input: 'src/main.js',
     output: {
-      file: 'assets/script.js',
+      file: 'docs/script.js',
       format: 'iife'
     },
-    plugins:[json(),includePaths(includePathOptions)]
+    plugins:[json(),terser(),includePaths(includePathOptions)]
 };
