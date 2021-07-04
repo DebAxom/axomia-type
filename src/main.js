@@ -4,7 +4,8 @@ let Textarea = document.getElementsByTagName('textarea')[0];
 
 function TranslateInput(e){
         var _this = Textarea;
-        OnInput();
+        _this.style.height = "auto";
+        _this.style.height = (Textarea.scrollHeight) + "px";
         if (e.data == " ") {
             var str = _this.value;
             var inputwords = str.split(" ");
@@ -15,8 +16,5 @@ function TranslateInput(e){
             _this.value = inputwords.join(" ");
     }
 }
-function OnInput() {
-    Textarea.style.height = "auto";
-    Textarea.style.height = (Textarea.scrollHeight) + "px";
-}
+
 Textarea.addEventListener('input',TranslateInput);
