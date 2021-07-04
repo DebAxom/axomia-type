@@ -2,7 +2,7 @@ import wordsMap from '../words/words.json';
 import Translate from './translate.js';
 import suffix from '../words/suffix.json';
 import prefix from '../words/prefix.json';
-import areSimilarity from './similarity.js';
+import areSimilar from './similarity.js';
 
 let wordsList = Object.keys(wordsMap);
 
@@ -13,7 +13,7 @@ export default function(word){
     }
 
     for (let i of wordsList){
-        if(areSimilarity(i,word)) {
+        if(areSimilar(i,word)) {
             let newWord = word.replace(i,',');
             let wordsArr = newWord.split(',');
             let prefixWord = (prefix[wordsArr[0]] || '');
