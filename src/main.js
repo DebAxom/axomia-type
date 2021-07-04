@@ -10,7 +10,7 @@ function TranslateInput(e){
             var inputwords = str.split(" ");
             var lastword = inputwords[inputwords.length - 2];
             if(lastword===null || lastword==" " || lastword=="") return;
-            let newLastWord = translateScript(lastword);
+            let newLastWord = translateScript(lastword.toLowerCase());
             inputwords[inputwords.length - 2] = newLastWord;
             _this.value = inputwords.join(" ");
     }
