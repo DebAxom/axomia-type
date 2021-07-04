@@ -9,6 +9,10 @@ export default function(first,last){
     var first_char = charArr_Last[0];
 
     if(isVowel(last_char)){
+        if(first==="আ"){
+            charArr_Last[0] = "য়া";
+        }
+
         return first+last;
     }
     

@@ -3,7 +3,7 @@ import add from './add-words.js';
 
 let wordsList = Object.keys(sub_words_Map);
 
-export default function AST(word){
+export default function Translate(word){
 
     if(wordsList.includes(word)) return sub_words_Map[word.toLowerCase()];
 
@@ -16,5 +16,5 @@ export default function AST(word){
     const firstHalf = charArr.splice(0, half);
     const secondHalf = charArr.splice(-half);
 
-    return add(AST(firstHalf.join('')),AST(secondHalf.join('')));
+    return add(Translate(firstHalf.join('')),Translate(secondHalf.join('')));
 }
