@@ -23,6 +23,16 @@ export default function(word){
     }
     
     word = Translate(word);
+    word = PostProcess(word);
 
+    return word;
+}
+
+function PostProcess(word){
+    if(word.charAt(0)==="ং"){
+        let charArr = word.split('');
+        charArr[0] = "ঙ";
+        return charArr.join('');
+    }
     return word;
 }

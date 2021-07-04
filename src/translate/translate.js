@@ -8,6 +8,24 @@ export default function Translate(word){
     if(charsList.includes(word)) return charMap[word.toLowerCase()];
 
     // Replacing some 2-letters English characters to single character Assamese letters.
+    word = Translate2Char(word);
+
+    let charArr = word.split('');
+    let strLen = charArr.length;
+    
+    if(strLen===1) return word;
+
+    const half = Math.ceil(strLen / 2);    
+    const firstHalf = charArr.splice(0, half);
+    const secondHalf = charArr.splice(-half);
+
+    const firstHalfString = firstHalf.join('');
+    const secondHalfString = secondHalf.join('');
+
+    return addWords(Translate(firstHalfString),Translate(secondHalfString));
+}
+
+function Translate2Char(word){
     word = word.replace(/th/g,'থ');
     word = word.replace(/bh/g,'ভ');
     word = word.replace(/cl/g,'ক্ল');
@@ -21,18 +39,5 @@ export default function Translate(word){
     word = word.replace(/dh/g,'ধ');
     word = word.replace(/ph/g,'ফ');
     word = word.replace(/ng/g,'ং');
-
-    let charArr = word.split('');
-    let strLen = charArr.length;
-    
-    if(strLen==1) return word;
-
-    const half = Math.ceil(strLen / 2);    
-    const firstHalf = charArr.splice(0, half);
-    const secondHalf = charArr.splice(-half);
-
-    const firstHalfString = firstHalf.join('');
-    const secondHalfString = secondHalf.join('');
-
-    return addWords(Translate(firstHalfString),Translate(secondHalfString));
+    return word;
 }
