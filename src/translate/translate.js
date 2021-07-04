@@ -11,10 +11,15 @@ export default function Translate(word){
     word = word.replace(/th/g,'থ');
     word = word.replace(/bh/g,'ভ');
     word = word.replace(/cl/g,'ক্ল');
+    word = word.replace(/kl/g,'ক্ল');
     word = word.replace(/jh/g,'ঝ');
     word = word.replace(/zh/g,'ঝ');
     word = word.replace(/sk/g,'স্ক');
+    word = word.replace(/ch/g,'চ');
+    word = word.replace(/kh/g,'খ');
+    word = word.replace(/gh/g,'ঘ');
     word = word.replace(/dh/g,'ধ');
+    word = word.replace(/ph/g,'ফ');
     word = word.replace(/ng/g,'ং');
 
     let charArr = word.split('');
