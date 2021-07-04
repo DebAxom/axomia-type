@@ -12,7 +12,7 @@ let includePathOptions = {
 export default {
     input: 'src/main.js',
     output: {
-      file: 'docs/script.js',
+      file: 'static/script.js',
       format: 'iife'
     },
     plugins:[json(),terser(),includePaths(includePathOptions)]
