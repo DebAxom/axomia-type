@@ -1,4 +1,4 @@
-import translateScript from './translate/translate';
+import translateScript from './translate/index.js';
 
 let Textarea = document.getElementsByTagName('textarea')[0];
 

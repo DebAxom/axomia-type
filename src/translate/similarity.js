@@ -13,10 +13,10 @@ function Similarity(a,b) {
 }
 
 export default function(a,b){
-    let Required_Similarity_Rate = 60;
+    let Required_Similarity_Rate = 80;
 
     if(a.length>=8 || b.length>=8){
-        Required_Similarity_Rate = 75;
+        Required_Similarity_Rate = 60;
     }
 
     let Actual_Similarity_Rate = Similarity(a,b);
