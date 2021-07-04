@@ -1,5 +1,5 @@
 import wordsMap from '../words/words.json';
-import AST from './translate.js';
+import Translate from './translate.js';
 import suffix from '../words/suffix.json';
 import prefix from '../words/prefix.json';
 import areSimilarity from './similarity.js';
@@ -22,7 +22,7 @@ export default function(word){
         }
     }
     
-    word = AST(word);
+    word = Translate(word);
 
     return word;
 }
