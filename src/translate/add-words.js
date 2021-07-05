@@ -44,7 +44,13 @@ export default function(first,last){
     }
     
     if(isVowel(first_char)){
-        charArr_Last[0] = Kars[first_char];
+
+        if(last_char==="গ"){
+            charArr_Last[0] = "ো";
+        }else{
+            charArr_Last[0] = Kars[first_char];
+        }
+        
         return charArr_First.join('') + charArr_Last.join('');
     }
 

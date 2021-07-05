@@ -29,10 +29,17 @@ export default function(word){
 }
 
 function PostProcess(word){
+    let charArr = word.split('');
+
     if(word.charAt(0)==="ং"){
-        let charArr = word.split('');
         charArr[0] = "ঙ";
-        return charArr.join('');
     }
-    return word;
+
+    if(word.endsWith("সে")){
+        charArr.pop();
+        charArr.pop();
+        charArr.push('ছে');
+    }
+    
+    return charArr.join('');
 }
