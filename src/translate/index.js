@@ -51,5 +51,8 @@ function PostProcess(word){
         charArr[1]="";
     }
     
-    return charArr.join('');
+    word = charArr.join('');
+    word = word.replace(/o/g,'');
+
+    return word;
 }

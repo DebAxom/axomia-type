@@ -7,9 +7,9 @@ export default function(first,last){
     var last_char = charArr_First[charArr_First.length-1];
     var first_char = charArr_Last[0];
 
-    // if(!isVowel(last_char) && first_char==="ৰ"){
-    //     charArr_Last[0] = "্ৰ";
-    // }
+    if(!isVowel(last_char) && first_char==="ৰ"){
+        charArr_Last[0] = "্ৰ";
+    }
 
     if(last_char==="ৰ" && !isVowel(first_char)){
         if(first_char==="য়"){
