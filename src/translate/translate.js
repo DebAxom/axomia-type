@@ -28,6 +28,7 @@ export default function Translate(word){
 function Translate2Char(word){
     word = word.replace(/oi/g,'ঐ');
     word = word.replace(/ou/g,'ঔ');
+    word = word.replace(/ee/g,'i');
     word = word.replace(/th/g,'থ');
     word = word.replace(/bh/g,'ভ');
     word = word.replace(/cl/g,'ক্ল');
