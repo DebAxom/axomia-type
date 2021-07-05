@@ -36,6 +36,7 @@ function Translate2Char(word){
     word = word.replace(/jh/g,'ঝ');
     word = word.replace(/zh/g,'ঝ');
     word = word.replace(/sk/g,'স্ক');
+    word = word.replace(/shn/g,'ষ্ণ');
     word = word.replace(/sh/g,'ষ');
     word = word.replace(/ch/g,'চ');
     word = word.replace(/khy/g,'ক্ষ');
@@ -48,5 +49,7 @@ function Translate2Char(word){
     word = word.replace(/tn/g,'t.n');
     word = word.replace(/sw/g,'s.w');
     word = word.replace(/hm/g,'h.m');
+    word = word.replace(/mh/g,'m.h');
+    word = word.replace(/jyo/g,'জ্যো');
     return word;
 }
