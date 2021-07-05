@@ -7,6 +7,14 @@ export default function(first,last){
     var last_char = charArr_First[charArr_First.length-1];
     var first_char = charArr_Last[0];
 
+    if(last_char==="ৰ" && !isVowel(first_char)){
+        if(first_char==="য়"){
+            charArr_Last[0] = "য";
+        }
+        charArr_First[charArr_First.length-1] = "ৰ্";
+        return charArr_First.join('')+charArr_Last.join('');
+    }
+
     // Converting য় to ্য় in some situations.
     if(first_char==="য়" && !isVowel(last_char)){
         charArr_Last[0] = "্য়";
@@ -17,11 +25,19 @@ export default function(first,last){
         charArr_First[charArr_First.length-1] = "ঙ";
     }
 
+    if(!isVowel(last_char) && first_char==="ৰ"){
+        charArr_Last[0] = "্ৰ";
+    }
+
     // Adding kars of vowels.
     if(isVowel(last_char)){
 
-        if(first_char==="আ"){
+        if(first_char==="আ" && last_char==="ই"){
             charArr_Last[0] = "য়া";
+        }
+
+        if(first_char==="আ" && last_char==="উ"){
+            charArr_Last[0] = "ৱা";
         }
 
         return charArr_First.join('')+charArr_Last.join('');

@@ -26,6 +26,8 @@ export default function Translate(word){
 }
 
 function Translate2Char(word){
+    word = word.replace(/oi/g,'ঐ');
+    word = word.replace(/ou/g,'ঔ');
     word = word.replace(/th/g,'থ');
     word = word.replace(/bh/g,'ভ');
     word = word.replace(/cl/g,'ক্ল');
@@ -33,11 +35,15 @@ function Translate2Char(word){
     word = word.replace(/jh/g,'ঝ');
     word = word.replace(/zh/g,'ঝ');
     word = word.replace(/sk/g,'স্ক');
+    word = word.replace(/sh/g,'ষ');
     word = word.replace(/ch/g,'চ');
     word = word.replace(/kh/g,'খ');
     word = word.replace(/gh/g,'ঘ');
     word = word.replace(/dh/g,'ধ');
     word = word.replace(/ph/g,'ফ');
     word = word.replace(/ng/g,'ং');
+    word = word.replace(/nt/g,'n.t');
+    word = word.replace(/tn/g,'t.n');
+    word = word.replace(/sw/g,'s.w');
     return word;
 }
