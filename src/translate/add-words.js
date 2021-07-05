@@ -39,7 +39,6 @@ export default function(first,last){
         if(first_char==="আ" && last_char==="উ"){
             charArr_Last[0] = "ৱা";
         }
-
         return charArr_First.join('')+charArr_Last.join('');
     }
     
