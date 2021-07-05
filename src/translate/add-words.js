@@ -7,7 +7,7 @@ export default function(first,last){
     var last_char = charArr_First[charArr_First.length-1];
     var first_char = charArr_Last[0];
 
-    if(!isVowel(last_char) && first_char==="ৰ"){
+    if(!isVowel(last_char) && first_char==="ৰ" && last_char!="ং"){
         charArr_Last[0] = "্ৰ";
     }
 

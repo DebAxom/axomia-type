@@ -1,6 +1,8 @@
 import translateScript from './translate/index.js';
 
 let Textarea = document.getElementsByTagName('textarea')[0];
+let ClearBtn = document.getElementById('clear-btn');
+let CopyBtn = document.getElementById('copy-btn');
 
 function TranslateInput(e){
         var _this = Textarea;
@@ -18,3 +20,13 @@ function TranslateInput(e){
 }
 
 Textarea.addEventListener('input',TranslateInput);
+
+ClearBtn.addEventListener('click',()=>{
+    Textarea.value="";
+});
+
+CopyBtn.addEventListener('click',()=>{
+    Textarea.select();
+    Textarea.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+});

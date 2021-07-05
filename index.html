@@ -5,10 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="./static/icons.css">
     <script src="./static/script.js" async defer></script>
+    <script>
+        function openMenu(_this){
+            if(_this.innerHTML==="close"){
+            document.getElementById('sidenav').style.width="0%";
+            _this.innerHTML="menu";
+            return;
+            }
+            _this.innerHTML="close";
+            if(screen.width>411){
+                document.getElementById('sidenav').style.width="30%";
+                return;
+            }
+            document.getElementById('sidenav').style.width="75%";
+        }
+    </script>
 </head>
 <body>
-    <div class="header">Axomia-Type</div>
+    <div id="sidenav">
+        <a href="https://github.com/DebAxom">Github</a>
+        <hr>
+        <a href="https://twitter.com/DebAxom">Twitter</a>
+        <hr>
+        <a href="https://youtube.com/channel/UCOlTCB5f2z6_lWl3466ZB_Q">Youtube</a>
+        <hr>
+        <a href="https://github.com/DebAxom/axomia-type">Github Repo</a>
+        <hr>
+        <p>Created by DebAxom</p>
+    </div>
+    <div class="header">
+        <span class="icons" onclick="openMenu(this)">menu</span>
+        
+        <h3>Axomia-Type</h3>
+
+        <div>
+            <span class="icons" id="copy-btn">content_paste</span>
+            <span class="icons" id="clear-btn">clear_all</span>
+        </div>
+
+    </div>
     <textarea placeholder="Type Assamese in Roman script here ..." list="test"></textarea>
 </body>
 </html>
