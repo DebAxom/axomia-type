@@ -41,6 +41,12 @@ function PostProcess(word){
         charArr.push('ছে');
     }
 
+    if(word.endsWith("সা")){
+        charArr.pop();
+        charArr.pop();
+        charArr.push('ছা');
+    }
+
     if(word.startsWith("ৰ্")){
         charArr[1]="";
     }
