@@ -40,6 +40,10 @@ function PostProcess(word){
         charArr.pop();
         charArr.push('ছে');
     }
+
+    if(word.startsWith("ৰ্")){
+        charArr[1]="";
+    }
     
     return charArr.join('');
 }
