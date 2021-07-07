@@ -42,6 +42,7 @@ function Translate2Char(word){
     word = word.replace(/khy/g,'ক্ষ');
     word = word.replace(/kh/g,'খ');
     word = word.replace(/gh/g,'ঘ');
+    word = word.replace(/ndh/g,'n.dh');
     word = word.replace(/dh/g,'ধ');
     word = word.replace(/ph/g,'ফ');
     word = word.replace(/ng/g,'ং');

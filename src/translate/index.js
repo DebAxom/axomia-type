@@ -51,6 +51,10 @@ function PostProcess(word){
         charArr[1]="";
     }
     
+    if(word.endsWith('্')){
+        charArr[charArr.length-1] = " ।";
+    }
+
     word = charArr.join('');
     word = word.replace(/o/g,'');
 

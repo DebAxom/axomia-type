@@ -19,9 +19,9 @@ export default function(first,last){
         return charArr_First.join('')+charArr_Last.join('');
     }
 
-    // Converting য় to ্য় in some situations.
+    // Converting য় to ্য in some situations.
     if(first_char==="য়" && !isVowel(last_char)){
-        charArr_Last[0] = "্য়";
+        charArr_Last[0] = "্য";
     }
 
     // Converting ং to ঙ in some situations.
