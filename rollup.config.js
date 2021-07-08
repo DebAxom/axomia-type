@@ -13,7 +13,7 @@ export default {
     input: 'src/main.js',
     output: {
       file: 'static/script.js',
-      format: 'iife'
+      format: 'es'
     },
     plugins:[json(),terser(),includePaths(includePathOptions)]
 };
