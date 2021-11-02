@@ -31,13 +31,13 @@ function PostProcess(word){
         charArr[0] = "ঙ";
     }
 
-    if(charArr[charArr.length-2] === "স"){
-        charArr[charArr.length-2] = "ছ";
-    }
+    // if(charArr[charArr.length-2] === "স"){
+    //     charArr[charArr.length-2] = "ছ";
+    // }
 
-    if(charArr[charArr.length-1] === "স"){
-        charArr[charArr.length-1] = "ছ";
-    }
+    // if(charArr[charArr.length-1] === "স"){
+    //     charArr[charArr.length-1] = "ছ";
+    // }
 
     if(word.startsWith("ৰ্")){
         charArr[1]="";
